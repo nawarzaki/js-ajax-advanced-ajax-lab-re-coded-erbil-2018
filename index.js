@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 function getRepositories() {
   const req = new XMLHttpRequest();
   req.addEventListener('load', showRepositories);
-  req.open('GET', 'https://api.github.com/users/CHANGELOG/repos');
+  req.open('GET', 'https://tv-v2.api-fetch.website/status');
   req.send();
 }
 
