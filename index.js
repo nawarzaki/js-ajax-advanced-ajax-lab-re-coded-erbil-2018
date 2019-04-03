@@ -6,10 +6,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
 });
 
 function getRepositories() {
-  const req = new XMLHttpRequest();
-  req.addEventListener('load', showRepositories);
-  req.open('GET', 'https://tv-v2.api-fetch.website/movies');
-  req.send();
+  var request = new XMLHttpRequest();
+
+request.open('GET', 'https://tv-v2.api-fetch.website/movies');
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    console.log('Status:', this.status);
+    console.log('Headers:', this.getAllResponseHeaders());
+    console.log('Body:', this.responseText);
+  }
+};
+
+request.send();
 }
 
 function showRepositories(event, data) {
