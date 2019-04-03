@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 function getRepositories() {
   const req = new XMLHttpRequest();
   req.addEventListener('load', showRepositories);
-  req.open('GET', 'https://github.com/popcorn-official/popcorn-api.git');
+  req.open('GET', 'https://tv-v2.api-fetch.website/movies');
   req.send();
 }
 
