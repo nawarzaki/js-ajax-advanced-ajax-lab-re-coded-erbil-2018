@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 function getRepositories() {
   const req = new XMLHttpRequest();
   req.addEventListener('load', showRepositories);
-  req.open('GET', 'https://github.com/popcorn-official/popcorn-api/blob/development/CHANGELOG.md#223---can-you-see-me-now---19-november-2016');
+  req.open('GET', 'https://api.github.com/users/CHANGELOG/repos');
   req.send();
 }
 
