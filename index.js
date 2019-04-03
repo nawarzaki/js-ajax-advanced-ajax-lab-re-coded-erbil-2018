@@ -2,7 +2,7 @@
 function getRepositories() {
   var request = new XMLHttpRequest();
 
-request.open('GET', 'https://tv-v2.api-fetch.website/movies');
+request.open('GET', 'https://tv-v2.api-fetch.website/random/movie');
 
 request.onreadystatechange = function () {
   if (this.readyState === 4) {
